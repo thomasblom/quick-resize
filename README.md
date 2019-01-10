@@ -9,7 +9,7 @@ Parameter | Description | Default
 --- | --- | ---
 `--image` | The image to resize | `image.png` in execution folder
 `--destination` | The destination folder for your generated images | `images/` in your execution folder
-`--config` | JSON config file | [Check config settings](#config-setting)
+`--config` | JSON config file | [Check config settings](#config-settings)
 
 #### Config settings
 The config file must be a `.json` file with a valid structure. The default config settings are like:

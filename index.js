@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 const yargs = require('yargs'),
     _cliProgress = require('cli-progress'),
     fs = require('fs'),

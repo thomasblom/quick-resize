@@ -1,30 +1,48 @@
 # Quick resize
-This package is made to resize images, especially for [Ionic](https://ionic.io) app icons.
+Use this package to easily resize images.
+#### Installation
+Start with installing the package:  `$ npm install -g quick-resize`  
 
-#### Start using
-Start with installing the package: `$ npm install -g quick-resize`  
-
-##### Parameters
-Parameter | Description | Default
---- | --- | ---
-`--image` | The image to resize | `image.png` in execution folder
-`--destination` | The destination folder for your generated images | `images/` in your execution folder
-`--config` | JSON config file | [Check config settings](#config-settings)
-
-#### Config settings
-The config file must be a `.json` file with a valid structure. The default config settings are like:
-```json
-{
-    "sizes": [16, 32, 48, 64, 128, 256, 512, 1024],
-    "density": 72
-}
+#### Usage
+Execute in your command line:  
+```
+$ quick-resize --image=image.png --destination=resized/ [--config=resize-config.json] [--width=256] [--height=256]
 ```
 
-##### Alternatives
-The `sizes` property in your config file represents the width and height of your new images. If you want different widths and height, you can also return an array with a width and height like this:
+##### Parameters
+Parameter | Description
+--- | --- |
+`--config` | JSON config file |
+`--image` | The image to resize |
+`--destination` | The destination folder for your generated images |
+`--width` | Width of the resized image
+`--height` | Height of the resized image
+
+##### Configuration
+By using the `config` parameter, the rest of the possible parameters won't be used.
+The `image`, `destination`, `width` and `height` parameter must be present in this JSON file. Besides these parameters, there are some more:
+
+Parameter | Type | Description
+--- | ---| ---|
+`image` | String |The image to resize |
+`destination` | String |The destination folder for your generated images |
+`width` | Number| Width of the resized image
+`height` | Number |Height of the resized image
+`multipleImages` | Boolean | If `true`, `images` will be used instead of `image`. Default is `false`
+`images` | String[] | Array of images to resize
+`multipleSizes` | Boolean | If `true`, `sizes` will be used instead of `width` and `height`. Default is `false`
+`sizes` | { width: Number, height: Number }[] | Array with multiple sizes
+
+*Example config file*  
 ```json
 {
-    "sizes": [[16, 32], [48, 64], [128, 256], [512, 1024]],
-    "density": 72
+  "image": "logo.png",
+  "destination": "your/destination/folder/",
+  "width": 100,
+  "height": 100,
+  "multipleImages": false,
+  "images": [],
+  "multipleSizes": false,
+  "sizes": []
 }
 ```

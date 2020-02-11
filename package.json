@@ -1,7 +1,7 @@
 {
   "name": "quick-resize",
-  "version": "1.0.0",
-  "description": "Generate app icons from one big image",
+  "version": "2.0.0",
+  "description": "Resize images directly from your command line",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,20 +16,18 @@
   "keywords": [
     "resize",
     "images",
-    "icons",
-    "ionic",
-    "app"
+    "icons"
   ],
   "author": "Thomas Blom",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/thomasblom/quick-resize/issues"
   },
-  "homepage": "https://github.com/thomasblom/quick-resize#readme",
+  "homepage": "https://github.com/thomasblom/quick-resize",
   "dependencies": {
     "cli-progress": "^2.1.1",
     "colors": "^1.3.3",
-    "sharp": "^0.21.1",
+    "sharp": "^0.24.0",
     "yargs": "^12.0.5"
   }
 }
